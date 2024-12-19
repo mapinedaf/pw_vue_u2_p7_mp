@@ -1,0 +1,202 @@
+Maquetacion de paginas web /20-11-2024
+estrcuturar organizar o diseñar el contenido *visual* de una pagina web
+Los usuarios vizualizan 2 cosas los elementos html y los estilos css 
+javascript no se visualiza de forma directa. 
+
+Estructura de la calculadora 
+
+
+| [        ] | label/ input  
+|------------|
+|[ ][c][<][%]| /button 
+|[7][8][9][X]|
+|[4][5][6][-]|
+|[1][2][3][+]|
+|[ ][0][.][=]|
+
+El elemento div se usa para hacer agrupaciones de varios elementos. 
+Tambien sirve para hacer separaciones no visuales. 
+dentro de la maquetacion se usa mucho el elemento div. 
+Tambien permite dar contornos dentro de la pagina web
+
+para llegar a la maquetacion debo tener al menos un diseño en mente. 
+
+Siempre el contenido principal tiene que estar envuelto en una division 
+
+display flex, permite manipular de forma flexible el contenido de un contenedor
+display grid permite que el contenido se distribuya en una cuadricula. 
+
+
+21/11/2024
+para resaltar un elemento css es comun usar un color mas claro que mantenga el contraste. 
+
+para declarar un objeto en js 
+const e :{
+    nombre:"Edison",
+    apellido:"Cayambe",
+    direccion:{
+        calle:"America"
+    }
+}
+
+
+Una vez que tengo maquetada la pagina se empieza a dar comportamiento con js
+
+
+--------------------------------------------------------------
+
+UNIDAD 2
+29/11/2024 
+Acutalmente no se usa diretamente javascript css y html puro para paginas empresariales
+pero aun se usa para paginas web estaticas que no tienen una logica de negocio
+Es suficiente construr sin un framework porque nomaneja transacciones y logica
+fuerte. El desarollo de pagina web estatica es mucho mas simple.  
+
+Las aplicaciones empresariales tienen logica de negocio. Apliaciones como core bancario,
+cosas muy grandes. Es posible haerlo con html css y JS pero es mas complejo y demoroso. 
+La industria ahora trabaja con frameworks que hacen mas rapido el trabajo. Estos frameworks
+estan pensados para manejar transacciones y sesiones. 
+
+Un framework es un conjunbto de librerias y especificaciones que permiten ejecutar desar-
+ollar constuir algun componente tecnologico en especifico. 
+
+para los frameworks de aplicaciones web se necesita uns ervidor que tenga un interprete 
+que entienda las librerias de framework y lo convierta en html css y js para que el nave-
+gador del cliente lo entienda. 
+
+Dentro de la industria existen multiples frameworks para programacion web, thymeleaf, JSF 
+reachface. Existe una tendencia fuerte a los frameworks basados en jacascript, javascript
+es un lenguaje de programacin muy versatil que permite hacer de manera dinamica la progra-
+macion de pagians web. Con Js se puede incrustar elmentos. Hay librerias que permiten 
+hacer iteraciones. Da la facilidad de hacer componentes dinamicos.  
+
+Existen 3 frameworks acruales basados en javascript: react.js, Angular y vue.js. Cada uno
+de estos tiene sus pros y contra, el que domina el mercado es react.js, segundo es vue y
+tercero es Angular. Vue tiene 2 elmentos fuertes: la cantidad de documentacion y su curva
+de aprendizaje es bastante corta, mas corta que react y angular.  
+
+Angular utiliza un lenguaje con funciones mas avanzadas llamado TypeScript, dentro de 
+react y vue tambien se puede usar typescript pero estan pensados en usarlos con JS. 
+AngularJs corresponde a una version antigua de angular. AngularJS realizo muchos cambios
+en el framework que deciodio cambiarse de nombre a Angular. AngularJS no es lo mismo que
+Angular. Son dos frameworks diferentes. AngularJS no esta dentro del top 3.
+
+Caracteristicas de vue:
+* Facil de iniciar
+* versatil
+* Rendimiento
+
+Vue se considera como FRAMEWORK PROGRESIVO. La aplicacion web no necesariamente debe ser 
+creada desde cero con vuejs. Se puede ir agregando componentes de vuejs progesivamente. 
+
+DOM Document Object Model, es la estructura de un documento html, es una estructura 
+jerarquica de arbol donde cada nodo es un objeto html. El metodo getElementById recorre 
+el DOM para encontrar el elemento. Vue tiene un alto rendimiento porque el DOM que maneja
+es extremadamente rapido. 
+
+Vue tiene 2 formas de implementarse. La forma naive es atravez de una referencia a un CDN 
+content delivery network, es un sistema de entrga de contenido a travez de la red. puedo
+trabajar con vue a travez de la red haciendo unicamento referenicia a la libreria de vue.
+Esto genera una dependencia de la CDN. La segunda forma de implementar es mediante la 
+instalacion de todas las lirberias del framework de forma local. 
+
+backtick `` comilla incilnada a la izquierda, permite declarar cuaqluier tipo de elemnto
+html 
+
+04/12/24
+
+Vue permite agregar programacion javascript dentro de contenido html mediante programacion
+delcarativa. Para esto vue utiliza {{}}
+
+El contenido que se programa dentro de template es la parte visual, vue nos dice que no 
+vamos a programar html dentro de tmeplate porque es mesclar las cosas. 
+
+vue trabaja con options api , para declarar opciones se separan con coma 
+
+data esta destinada a crar propiedades dentro de vue, son el nexo de comunicacion 
+entre la pagina web y el archivo js, se conocen como propiedades reactivas. 
+las propeidades reactivas permiten mandar informacion entre el codigo js y el html
+para que se interpreten en el html hay que usar {{}}
+
+La opcion de metodos sirve para declarar metodos. Para trabajar el comportamiento de la
+pagina, los eventos y la funcionalidad utiliza un concepto llamado directivas. 
+todas las directivas empiezan con v- 
+para eventos usa v-on esta directiva se usa dentro de cualquier elemento html que genera
+un evento. 
+
+en vue todo cambio realizado en javascript inmediatamente de manera reactiva se refleja 
+en la parte visual. automaticamente se sincroniza. Basta cambair el dato en js 
+
+05-12-24
+directivas
+Cada directiva tiene una utilidad especifica ej v-on eventos v-for iteraciones
+
+v-model permite enlazar un elemento html de entrada en la vista con un elemento js normalmente
+este elmeneto es una propiedad reactiva. Estos elmento incluyen input, text area, etc. 
+
+Modificadores de eventos
+
+vue tiene directivas para modificar html dependiendo de un booleano ej cosntrtuir un boton
+solo si autor es diferente de null
+
+la diferencia entre v-if y v-show es que v-if no construlye el elemetno vshow no lo muestra
+es mas costoso crear y eliminar que solo ocultar 
+si se usa poco es mejor eliminar, si se usa bastante es mejor ocularla
+
+11-12-24
+Cualquier framework que funcione con javascript necesita instalar nodejs
+Babel es una libreria que permite transformar el codigo javastcript moderno
+en js antiguo para ser compatible con navegadores antiguos. es un transpilador
+de js.
+
+typescript es una evolucion de javascript. Agrega librerias y funcionalidad
+adicional. 
+
+vuex permite gestionar los estados de manera centralizada las sesione
+de la aplicacion 
+
+linter es una libreria de formateo de codigo es util pero no es necesario
+
+Pruebas unitarias: a fragmentos de codigos especifocs hacer una Prueba
+programada 
+
+18-12-2024
+Dentro de App.vue no deberia programar, es solo el inicio. se debe llamar
+a otros archivos donde se programa lo que se necresita. 
+
+Vue maneja un conperto que se conoce como componentes. los componentes Son 
+estructuras independientes de una fraccion o una parte de una pagina web. 
+No quiere decir que no se comunique con otro componente. Este componente se 
+programa con todo lo necesario para que funcione. 
+
+Se deben ver como piesas de lego que contruyen la pagina web. Cuantos y
+cuales componentes van a depender del diselo de la pagina web. 
+el diseño bas basico es
+header
+nav 
+section aside 
+footer 
+
+Todos los componentes se crean con la extension .vue y deben estar dentro 
+de la carpea components. 
+Las paginas tambien se crean con la extension .vue y tecnicamte es un 
+componente mas, el componente padre. 
+
+tecnicamente no hay diferencia entre pagina y componente pero conceptualmente
+si. La pagina es la que contiene a los componentes. 
+
+los componntes deben ser pensados con un alto potencial de reutilizacion. 
+no se crea un componete solo pensado para una pagina. 
+
+Un componete esta estrcturado por 3 lemtnos
+template, script , style
+
+
+cada instancia de un pomponente maneja su propio estado
+
+propiedades computadas es una manera mas eficiente 
+para calcular logica de negocio que no cambia
+una propiedad computada no recibe argumentos 
+pero se declara de manera similar a un metodo 
+
+las propiedades computadas guardan su estado en cache. 
