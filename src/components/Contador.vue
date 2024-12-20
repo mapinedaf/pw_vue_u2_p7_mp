@@ -1,5 +1,5 @@
 <template>
-  <h2>{{ titulo }}</h2>
+  <h2>{{ encabezado }}:{{ valor2 }}</h2>
 
   <p>{{ numero }} <sup>2</sup> = {{ calcularCuadradoComputada }}</p>
   <p>{{ numero }} <sup>2</sup> = {{ calcularCuadradoComputada }}</p>
@@ -8,16 +8,22 @@
   <p>{{ numero }} <sup>2</sup> = {{ calcularCuadradoComputada }}</p>
 
   <div>
-    <button v-on:click="incrementar">+1</button>
+    <button @:click="incrementar">+1</button>
     <button v-on:click="decrementar">-1</button>
   </div>
+
+  <div v-if ="this.esVerdad">
+
+    <h1>Feliz Navidad</h1>
+  </div>
+
 </template>
  
 <script>
 export default {
   data() {
     return {
-      numero: 10,
+      numero: this.valor,
       titulo: "Contador",
     };
   },
@@ -38,9 +44,40 @@ export default {
   computed: {
     calcularCuadradoComputada() {
       console.log("Entro a calcular computada ");
+      
       return this.numero * this.numero;
     },
   },
+  //props:['encabezado','valor']
+  props:{
+    encabezado:{
+      type:String,
+      validator(encabezado){
+        return !encabezado.includes('a')
+      }
+    },
+    valor:Number,
+    valor2:{
+      type:Number,
+      required:false,
+      default:77,
+      validator(value){
+        //programo mi validacion bajo mi criterio
+        //y retorno treu cuando es valido para mi 
+        //retorno false cuando no es valido para mi 
+
+        return value<=77
+      }
+    },
+    esVerdad:{
+      type:Boolean,
+      required:true
+    },
+    arreglo:Array,
+    fecha:Date,
+    obejetoPersona:Object
+
+  }
 };
 </script>
  

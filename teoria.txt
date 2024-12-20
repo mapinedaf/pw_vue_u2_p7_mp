@@ -200,3 +200,17 @@ una propiedad computada no recibe argumentos
 pero se declara de manera similar a un metodo 
 
 las propiedades computadas guardan su estado en cache. 
+
+
+19/12/24
+
+Vue tiene una directiva para javascript conocida como como v-bind
+Hace que el valor del atributo se evalue como javascript 
+
+Las directivas tiene declaraciones mas cortas, para v-bind 
+se pueden declarar con :valor, para v-on es @:valor
+
+los prop se pueden declarar de 3 formas
+1 como arreglo 
+2 como objeto json, permite declarar el tipo de dato 
+
