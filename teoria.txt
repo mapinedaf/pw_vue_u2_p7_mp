@@ -214,3 +214,26 @@ los prop se pueden declarar de 3 formas
 1 como arreglo 
 2 como objeto json, permite declarar el tipo de dato 
 
+20/12/2024 
+v-for pide que se diga cual va a ser el identificador de cada elemento. 
+¿cual va a ser el identificador de cada item? se pone un atribto que icrementa
+Existon 2 componentes de un progama 
+El fornt end toda la programacion visuale
+El backend toda la logica de negocio
+El front end se comunica con el back end que tambien es una webapp
+
+En la web existen programacion de backend publicas, puede estar desarrollado 
+en multiles tecnologias, lo mas comun es que este desarrolladp como una api
+Una API es una forma de implementar un backend. 
+Las apis no necesarimante son aplicaciones 
+Los servicios RESTful tienen una comunicacion por defecto con JSON 
+
+Obervadores- watch
+no observa directamente al elemento. el observador se pone en la propiedad
+reactiva. 
+
+Cuando llamamos a un api es importante usar la palabra reservada await
+al metodo que contenga el fetch debo ponerlo como asincrono
+
+si quiero llamar el async dentro de otro metodo lo debo llamar con awair
+
